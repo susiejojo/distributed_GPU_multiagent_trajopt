@@ -1,0 +1,119 @@
+{
+    "configs":[
+        {
+            "name": "16_agents_2_obs",
+            "robot_config": "dataset3D/16_agents_circle.json",
+            "x_init_obs": [3,-3],
+            "y_init_obs": [3,-3],
+            "z_init_obs": [1,1],
+            "robot_rad": 0.3,
+            "obst_rad": 0.4,
+            "weight_smoothness":50.0,
+            "rho_obs":200.0
+        },
+        {
+            "name": "16_agents_4_obs",
+            "robot_config": "dataset3D/16_agents_circle.json",
+            "x_init_obs": [4,-4,-4,4],
+            "y_init_obs": [4,-4,4,-4],
+            "z_init_obs": [1,1,1,1],
+            "robot_rad": 0.3,
+            "obst_rad": 0.4,
+            "weight_smoothness":50.0,
+            "rho_obs":200.0
+        },
+        {
+            "name": "16_agents_8_obs",
+            "robot_config": "dataset3D/16_agents_circle.json",
+            "x_init_obs": [4,-4,4,-4,2,-2,2,-2],
+            "y_init_obs": [4,-4,-4,4,4,4,-4,-4],
+            "z_init_obs": [1,1,1,1,1,1,1,1],
+            "robot_rad": 0.3,
+            "obst_rad": 0.4,
+            "weight_smoothness":50.0,
+            "rho_obs":200.0
+        },
+        {
+            "name": "16_agents_12_obs",
+            "robot_config": "dataset3D/16_agents_circle.json",
+            "x_init_obs": [4,-4,4,-4,2,-2,2,-2,4,4,-4,-4],
+            "y_init_obs": [4,-4,-4,4,4,4,-4,-4,2,-2,2,-2],
+            "z_init_obs": [1,1,1,1,1,1,1,1,1,1,1,1],
+            "robot_rad": 0.3,
+            "obst_rad": 0.4,
+            "weight_smoothness":50.0,
+            "rho_obs":200.0
+        },
+        {
+            "name": "16_agents_24_obs",
+            "robot_config": "dataset3D/16_agents_circle_24_obst.json",
+            "x_init_obs": [6,-6,6,-6,3,-3,3,-3,6,6,-6,-6,0,0,6,-6,3,-3,-3,3,0,0,3,-3],
+            "y_init_obs": [6,-6,-6,6,6,6,-6,-6,3,-3,3,-3,6,-6,0,0,3,-3,3,-3,3,-3,0,0],
+            "z_init_obs": [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+            "robot_rad": 0.3,
+            "obst_rad": 0.4,
+            "weight_smoothness":220.0,
+            "rho_obs":190.0
+        },
+        {
+            "name": "32_agents_12_obs",
+            "robot_config": "dataset3D/32_agents_circle.json",
+            "x_init_obs": [6,-6,6,-6,3,-3,3,-3,6,6,-6,-6],
+            "y_init_obs": [6,-6,-6,6,6,6,-6,-6,3,-3,3,-3],
+            "z_init_obs": [1,1,1,1,1,1,1,1,1,1,1,1],
+            "robot_rad": 0.3,
+            "obst_rad": 0.4,
+            "weight_smoothness":50.0,
+            "rho_obs":200.0
+        },
+        {
+            "name": "32_agents_16_obs",
+            "robot_config": "dataset3D/32_agents_circle.json",
+            "x_init_obs": [6,-6,6,-6,3,-3,3,-3,6,6,-6,-6,0,0,6,-6],
+            "y_init_obs": [6,-6,-6,6,6,6,-6,-6,3,-3,3,-3,6,-6,0,0],
+            "z_init_obs": [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+            "robot_rad": 0.3,
+            "obst_rad": 0.4,
+            "weight_smoothness":50.0,
+            "rho_obs":200.0
+        },
+        {
+            "name": "32_agents_20_obs",
+            "robot_config": "dataset3D/32_agents_circle.json",
+            "x_init_obs": [6,-6,6,-6,3,-3,3,-3,6,6,-6,-6,0,0,6,-6,3,-3,-3,3],
+            "y_init_obs": [6,-6,-6,6,6,6,-6,-6,3,-3,3,-3,6,-6,0,0,3,-3,3,-3],
+            "z_init_obs": [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+            "robot_rad": 0.3,
+            "obst_rad": 0.4,
+            "weight_smoothness":50.0,
+            "rho_obs":200.0
+
+        },
+        {
+            "name": "32_agents_24_obs",
+            "robot_config": "dataset3D/32_agents_circle.json",
+            "x_init_obs": [6,-6,6,-6,3,-3,3,-3,6,6,-6,-6,0,0,6,-6,3,-3,-3,3],
+            "y_init_obs": [6,-6,-6,6,6,6,-6,-6,3,-3,3,-3,6,-6,0,0,3,-3,3,-3],
+            "z_init_obs": [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+            "robot_rad": 0.3,
+            "obst_rad": 0.4,
+            "weight_smoothness":50.0,
+            "rho_obs":200.0
+
+        },
+        {
+            "name": "32_agents_8_random",
+            "robot_config": "dataset3D/32_agents_circle.json",
+            "x_init_obs": [0.40317955, -2.17338054, -3.66279278, -1.52694015,
+            -1.93996116,  3.68519599, -0.69826908, 2.60424831],
+            "y_init_obs": [-3.82559531,  2.38270264,  1.33028541, -2.793254,
+                3.67434763, -3.54610745, -0.29636689, 5.8195786],
+            "z_init_obs": [1,1,1,1,1,1,1,1],
+            "robot_rad": 0.3,
+            "obst_rad": 0.4,
+            "weight_smoothness":220.0,
+            "rho_obs":190.0
+
+        }
+    ]
+}

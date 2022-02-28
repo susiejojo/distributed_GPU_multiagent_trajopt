@@ -1,0 +1,8 @@
+__pycache__/
+RAL_comparisons/
+our_paths/
+final_benchmark_paths/
+al_smoothness.py
+residuals/
+data/
+distances/
