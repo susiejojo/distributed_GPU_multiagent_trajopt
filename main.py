@@ -361,8 +361,6 @@ def generate_trajectories(config_name,robot_config,obst_config,obst_rad, weight_
 if __name__=="__main__":
     max_outer_iter = 100
     maxiter_circle = 1
-    # weight_smoothness = 220.0
-    # rho_obs = 190
     obst_config_file = "obst_configs.json"
     with open(obst_config_file, 'r') as f:
         obst_config = json.load(f)
