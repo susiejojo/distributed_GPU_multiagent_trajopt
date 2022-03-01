@@ -56,7 +56,7 @@ def delete_per_row_3D(n_agents, a_iter,a_obs):
         a = jnp.vstack((a,obs_mat))
     return a
 
-def update_params(rho_obs, ext_rad, ext_rad_sq, n_agents, num_obs, n_d, x_guess_expand, y_guess_expand, z_guess_expand, x_obs, y_obs, z_obs):
+def update_params(rho_obs, n_agents, num_obs, n_d, ext_rad, ext_rad_sq, x_guess_expand, y_guess_expand, z_guess_expand, x_obs, y_obs, z_obs):
     
 
     wc_alpha = (x_guess_expand-x_obs)
@@ -184,7 +184,7 @@ def generate_trajectories(config_name,robot_config,obst_config,obst_rad, weight_
     optim_jit = jit(optim_3D.compute_circle_traj, static_argnums=([0,1,2,3,4]))
     filter_jit = jit(apply_mask)
     delete_jit = jit(delete_per_row_3D,static_argnums=([0]))
-    update_jit = jit(update_params, static_argnums=([0,1,2,3,4,5]))
+    update_jit = jit(update_params, static_argnums=([0,1,2,3]))
     update_inner_jit = jit(wrapper_circle_initialization_3D.update_inner_params, static_argnums=([0,1,2,3,4,5,6,7,8,9]))
 
     x_others = delete_jit(n_agents, x_all,x_obs_static)
@@ -238,7 +238,9 @@ def generate_trajectories(config_name,robot_config,obst_config,obst_rad, weight_
         y_guess_expand = jnp.expand_dims(y_guess,1)
         z_guess_expand = jnp.expand_dims(z_guess,1)
 
-        wc_alpha,ws_alpha,alpha_obs,wc_beta,ws_beta,beta_obs,c1_d,c2_d,d_obs = update_jit(rho_obs, ext_rad, ext_rad_sq, n_agents, num_obs, n_d, x_guess_expand,y_guess_expand,z_guess_expand, x_obs,y_obs,z_obs)
+        # print (ext_rad)
+
+        wc_alpha,ws_alpha,alpha_obs,wc_beta,ws_beta,beta_obs,c1_d,c2_d,d_obs = update_jit(rho_obs, n_agents, num_obs, n_d, ext_rad, ext_rad_sq, x_guess_expand,y_guess_expand,z_guess_expand, x_obs,y_obs,z_obs)
         
         ###################################### Trajectory with circle approximation
 
